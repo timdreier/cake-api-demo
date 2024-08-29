@@ -13,8 +13,6 @@ You need to install the following tools to run this project:
 - 💻 [Task](https://taskfile.dev/installation/) (optional)
 
 ## Getting Started
-First, create a Folder `api` the project folder. This folder will contain the Symfony project.
-
 ```
 Before you start, you need to start the Docker containers:
 ```

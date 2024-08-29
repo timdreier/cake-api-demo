@@ -11,8 +11,10 @@ services:
     build: ./docker/php/
     expose:
       - 9000
+    environment:
+      COMPOSER_HOME: /var/www/html/.composer
     volumes:
-      - ./api/:/var/www/html/
+      - ./:/var/www/html/
 
   db:
     image: mariadb
