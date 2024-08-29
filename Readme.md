@@ -13,7 +13,6 @@ You need to install the following tools to run this project:
 - 💻 [Task](https://taskfile.dev/installation/) (optional)
 
 ## Getting Started
-```
 Before you start, you need to start the Docker containers:
 ```
 task run
@@ -299,3 +298,7 @@ private ?string $title = null;
 ```
 
 🔗 Open your browser and go to http://localhost:8000/api. You will see that only the id and title are returned in the `GET` endpoints for the `Cake` entity.
+
+## There is much more!
+
+Checkout the official [API Platform documentation](https://api-platform.com/docs) to learn more about the features of API Platform.
