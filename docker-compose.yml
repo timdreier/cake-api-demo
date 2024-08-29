@@ -1,0 +1,36 @@
+services:
+  nginx:
+    build: ./docker/nginx/
+    ports:
+      - 8000:80
+
+    volumes:
+      - ./api/:/var/www/html/
+
+  php:
+    build: ./docker/php/
+    expose:
+      - 9000
+    volumes:
+      - ./api/:/var/www/html/
+
+  db:
+    image: mariadb
+    volumes:
+      -    mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mariadb
+      MYSQL_DATABASE: mariadb
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8001:80
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: mariadb
+
+volumes:
+  mysql-data:
